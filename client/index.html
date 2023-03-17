@@ -1,9 +1,9 @@
 <script type="text/javascript">
-  const eventSource = new EventSource('/api/event');
+  const eventSource = new EventSource('/api/order_page');
 
   eventSource.onmessage = ({ data }) => {
     const message = document.onCreateElement('li');
-    message.inierText = data;
+    message.innerText = data;
 
     documant.body.appendChild(message);
   };
