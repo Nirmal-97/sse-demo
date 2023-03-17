@@ -1,0 +1,10 @@
+<script type="text/javascript">
+  const eventSource = new EventSource('/api/event');
+
+  eventSource.onmessage = ({ data }) => {
+    const message = document.onCreateElement('li');
+    message.inierText = data;
+
+    documant.body.appendChild(message);
+  };
+</script>
